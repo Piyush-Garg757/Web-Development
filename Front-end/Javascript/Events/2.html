@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #2f2f2f; color: #fff;">
+    <h1>Piyush's Page</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(function () {
+        console.log("Piyush Garg");
+    }, 1000)//yahan time interval ata hai jaise 1000 yani 1 millisecond aur ye chalega ek hi baar bas ek baar naam print karke chod dega
+    // yahi setInterval baar baar chalta rehta hai uss interval ke
+
+    // const say_name = function () {
+    //     console.log("Piyush Garg");
+    // }
+    // setTimeout(say_name, 1000) aise bhi kar sakte hain
+
+    const change_heading = function () {
+        document.querySelector('h1').innerHTML = "Coding Master"
+    }
+    const change = setTimeout(change_heading, 2000)
+    // to isse 2 sec baad mere web page pe heading badal ke Coding master ho jayegi
+    // ab humein ise rokna bhi ana chahiye 
+    // to ab hum ye acheive karna chahte hain ki agar user 2 sec se pehle stop button daba de to  change na ho
+
+    document.querySelector('#stop').addEventListener('click', function (e) {
+        clearTimeout(change)
+        console.log("Stopped");
+        
+    })
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!-- DOM - document object model -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bg-black">
+        <h1 id="Firstheading" ,class="heading">Learning DOM </h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+
+</html>
+
+<!-- ismein basically yebhai ki webpage ke console mein jake hum elements of the web page ko easuly kaise ccess kar sakte hain using javascript -->
+<!-- browser mein console open karke 
+console.log(window.document) run karne pe sara documentation mil jayega uss webppage ka ki vo kis kis se bana hai
+console.log(document) isse bhi same but upar vale se thoda kam detail emin milta hai 
+agar chaiye ki full detail mein mile to use console.dir(document)
+
+console.log(document.baseURI) se web oage ka basic URL mil jayega
+console.log(document.links) se web page ke sare links mil jayenge but vo HTML collection ke roop mein milte hain na ki array ke roop mein to usmein array ki properties nahi lag skti but haan console.log(document.links[1]) ye chalega aur web oage ki dusri link de dega-->
+<!-- ab dekhte hain web page pe se kuch select karna
+document.getElementById("firstheading") - to ye humein vo pura element de dega jiski id ye hai aurbhum ismein manipulation bhi kar sakte hain
+document.getElementById("firstheading").innerHTML="<h1>Piyush Garg</h1"
+ 
+ab apne iss webpage pe dekhte hain ye saab karke 
+browser mein khholke console pe jake :-
+document.getElementById('Firstheading') to  ye humein humara h1 element de dega pura-<h1 id="Firstheading" ,class="heading">Learning DOM</h1>
+document.getElementById('Firstheading').id - Firstheading
+document.getElementById('Firstheading').class - undefined
+document.getElementById('Firstheading').className - heading  to ye ek baat yaad rakhne ki ho gayi ki class se undefined dega to className use karna hai
+document.getElementById('Firstheading').getAttribute('id')   document.getElementById('Firstheading').getAttrbute('class') ye bhi use kar sakkte hain
+document.getElementById('Firstheading').setAttrbute('class','text') - ye vala jo yahan se denge vo humaare original vake ko overwrite karega humesha web page pe to agar use bhi sustained rakhna hai to use bhi yahan dena jaise ki iss case mein
+document.getElementById('Firstheading').setAttrbute('class','text heading') aise dena chahiye
+
+
+cosnt title=document.getElementById('Firstheading')
+title.style.backgroound-color='green'
+title.style.padding=15 px
+title.textContent - isse humein Learning DOM milega  .innerText aur .innerHTML bhi same values denge
+
+tC aur iT mein difference ye haai ki maan lo h1 ke andar span mein bhi kuch likha hai aur span ki display:none de rakhi hai matlab basically koi styling de rakhi hai to ab jab dono ko run karenge to tC to pura dihayega but iT span vala nahi dikhayega  aur span ki kuch styling nahi doge to dono pura teext show karenge
+aurr innerHTML kya krega vo aise dikhayega - Learning DOM <span style="display:none;"> in easiest way possible</span> -->

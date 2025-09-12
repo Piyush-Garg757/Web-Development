@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:hover{
+            background-color: #7013db;
+            color: #ff0101;
+        }
+        input:focus{
+            background-color: pink;
+            color: aquamarine;
+        }
+        a:hover{
+            /* background-color: #123456; */
+            color: pink;
+        }
+        a:active{
+            color: chocolate;
+        }
+        a:visited{
+            color: black;
+        }
+        a:first-child{
+            color: #7013db;
+            /* ye bas tabhi chalega jab ye tag jispe ye lagana hai vo kisi ka chid ho jaise a nav mein hai to vo nav ka child hua isiliye ye yahan work karega */
+        }
+        a:nth-child(1){
+            color: #7013db;
+            /* jaise first child tha vese hi nth child hai bracket mein n ki value deni hoti hai
+            ismein even odd 2n+1 ye sab bhi aa skata hai */
+        }
+    </style>
+</head>
+<body>
+    <!-- most frequently used pseudo classes are
+     hover
+     focus
+     link
+     visited
+     active
+     first-child
+     long
+     nth-child -->
+    <!--inke use se hum apna web page aur sundar bana sakte -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ipsum temporibus praesentium nemo reprehenderit laudantium totam earum rerum, dolorem adipisci minima provident assumenda molestiae maxime quae dolorum maiores consequatur eveniet.</p>
+    <input type="text" placeholder="Enter your name">
+    <nav>
+    <a href="https://www.linkedin.com/in/piyush-garg-806734323/" target="_blank">Visit my Linkedin</a>
+    </nav>
+    
+</body>
+</html>

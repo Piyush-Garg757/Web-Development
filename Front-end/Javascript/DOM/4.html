@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = 'class'
+    div.id = Math.round(Math.random() * 20 + 1)
+    div.setAttribute("title", "this is title")
+    div.style.backgroundColor = 'green'
+    div.style.padding = '15px'
+    // div.innerText = 'Piyush Legend'
+    const add_text = document.createTextNode("Piyush Legend")
+    div.appendChild(add_text)
+    // upar vale dono hi method sahi hain
+
+    // abhi humne ye sab kar diya but ye memory ke andar hai page pe nahi aya hai 
+    document.body.appendChild(div)
+    // ab humara web page pe bhi ye show hoga
+</script>
+
+</html>

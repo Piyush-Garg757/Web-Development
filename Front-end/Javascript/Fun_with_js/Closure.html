@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    function outer() {
+        let username = "Piyush"
+        function inner() {
+            console.log(username);
+        }
+        function inner2() {
+            console.log(username);
+        }
+        inner()
+        inner2()
+    }
+    outer()
+    // function ke andar jitne bhi function honge unhein uss function ke variables ka access milega jaisse is case mein username ka mil raha hai        isi koo lexical scoping khte hain
+
+    function make_function() {
+        const u1 = "Piyush Garg"
+        function display_name() {
+            console.log(u1);
+        }
+        return display_name
+    }
+    const func = make_function()
+    func()
+    // ismein return kiya hai inner function ko call karne ke bajay to function to khatam ho jayega return karke aur humne to bas inner function ka reference return kiya hai to vo outer function ka u1 kaise print karayega 
+    // yahan ata hai closure jo ki ye kehta hai ki iss case mein bas inner function ka scope nahi balki uska lexical scope jayega  to isiliye ye chalega
+</script>
+<script>
+    // hum chahte hain ki button pe click karne se bgc change ho jaye
+
+
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
+    // ab aise kitnni baar likhenge   to hum ek function banate hain
+
+
+    function clickHandler(color) {
+        document.body.style.backgroundColor = `${color}`
+        // return function () {
+        //     document.body.style.backgroundColor = `${color}`
+        // }
+    }
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+    /*Your code isn't working because you're calling the function immediately and assigning its result to onclick, instead of telling the browser which function to run when the click happens.
+
+    So, your code is effectively doing this:
+
+    JavaScript
+
+    // 1. The function is called right away. Body color becomes orange.
+    // 2. The function returns undefined.
+    // 3. The onclick property is set to undefined.
+    document.getElementById('orange').onclick = undefined;
+
+    // 1. The function is called right away. Body color becomes green.
+    // 2. The function returns undefined.
+    // 3. The onclick property is set to undefined.
+    document.getElementById('green').onclick = undefined;
+    The page loads with a green background, and clicking the buttons does nothing because no function is assigned to handle the click.*/
+
+
+    // to humne function return kar diya function ke andar tai vo onclick ko function return ho na ki undefined      aurr ye practical example hai lexical scoping aur closure ka
+</script>
+
+</html>

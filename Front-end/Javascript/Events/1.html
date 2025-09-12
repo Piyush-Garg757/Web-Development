@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // upar img tag mein hi aage onclick="alert("oel clicked")" aise likh sajjte hain but vo scaling ke time efasible approach nahi hai
+    /*document.getElementById("owl").onclick = function () {
+        alert("Owl Clicked")
+    }*/
+    //    ismein problem ho sakti hai propagation mein isiliye we use eventlisteners
+
+    /*document.querySelector('#owl').addEventListener('click',function(){
+        alert("owl clicked")
+    },false)*/ // yye false yahan pe default value hoti hai
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+    // ye sab attributes hain jo ki browser pe console.log(e) karke dekh sakte hain
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        alert("Clicked inside ul")
+    }, false)
+    document.querySelector('#owl').addEventListener('click', function (e) {
+        alert("Clicked inside owl")
+    }, false)
+    // baaki main to theek hai but owl mein do eventlisteners laga diye to pehle kaunsa work karega ?
+    // yyahan pe ata hai bubbling jaise bubblle neeche se upar jatab hai vese hi inside to outside priority hogi to #owl andar hai aur #images bahar to owl vala pehle chalega owl ke case mein
+
+    // *********** yahan pe default value false hhoti hai to use hata bhi doge to same output ayega but agar andar true kar denge to vahan bubbling ki jagah capturing lagta hai vagan outside to inside hota hai to vahan owl vala baad mein print hoga
+    // aur agar ek mein true aur ek mein false kar doge to true vala chalega
+
+    // bubbling ya capturing(basically propagation) prevent karna hai to stopPropagation use karte hain 
+
+    document.getElementById('google').addEventListener('click', function (e) {
+        console.log("Google clicked");
+        e.preventDefault()
+        // e.stopPropagation()
+    })
+    // console.log(e.target); karenge to pura vo code aa jayega uss element ka jaaise :-<img width="200px" id="photoshop"
+    // src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+    // alt="photoshop"> kyuki image pe click kar rahe hain to image hi to ayega
+
+
+
+
+    // ab hum ye karna chahte hain ki image pe click karte hi vo gayab ho jaye
+    document.querySelector('#images').addEventListener('click', function (e) {
+        e.stopPropagation()
+        // ab humein yhan gayab kaarna hai to pura parent li gayab karna padega to
+        if (e.target.tagName === 'IMG' || e.target.tagName === 'A') {
+            let remove_img = e.target.parentNode
+            remove_img.remove()
+        }
+    })
+    // but ismiein ek problem hai ki agar humne li pe click kar dia to uska parent to ul hai to kisi bhi li pe click karte hi pura gayab ho jayega to humein ek check lagana hoga
+</script>
+
+</html>

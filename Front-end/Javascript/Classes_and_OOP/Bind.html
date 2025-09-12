@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor() {
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement - pehli ye ki web page load karte hi react ka ek object ban jaye   dusra ye ki button click karne pe kuch ho 
+            // requirement 2
+            document.querySelector('button').addEventListener('click', this.handle_click.bind(this))// reference pass karna padega 
+        }
+        handle_click() {
+            console.log("Button clicked");
+            console.log(this.server);
+        }
+    }
+    // requirement 1 
+    const app = new React()
+</script>
+
+</html>

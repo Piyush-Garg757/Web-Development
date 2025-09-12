@@ -1,0 +1,47 @@
+/* universal selector */
+*{
+    margin: 0;
+    border: 0;
+}
+body{
+    background-color: coral;
+  font-family: "Savate", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+/* element selector */
+h1{
+    color:khaki
+}
+.abc{
+    color: blueviolet;
+}
+.def{
+    font-size: 20px;
+}
+#gs{
+    font-display:fallback;
+}
+/* selector list */
+.def,.abc{
+    font-feature-settings: "abvm";
+}
+/* descandent selector */
+main p{
+    color: aquamarine;
+}
+/* child selector */
+h1>p{
+    color: darkorchid;
+}
+/* sibling */
+section +p{
+    /* matlab section ke just baad jo p ayega uske liye */
+}
+section ~ p{
+    /* matlab section ke baad jo jo p ayenge us sabke liye */
+}
+/* attribute selector */
+[target="_blank"]{
+    color: indianred;
+}

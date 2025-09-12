@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    /* box sizing border box dene se hum ye keh rahe hain ki jahan bhi hum height denge to vo padding border aur humara content include karke hoga */
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f5ed;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    padding: 20px;
+    padding-left: 100px;
+}
+.logo_circle{
+    height: 20px;
+    width: 20px;
+    background-color: #3b855b;
+    border-radius: 50%;
+}
+.header h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+.header ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 40px;
+    gap: 30px;
+}
+.header ul li a{
+    list-style: none;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+button{
+    background-color: #3b855b;
+    border-radius: 5px;
+    padding: 4px 10px;
+    border: 1px solid white;
+    width: fit-content;
+    font-weight: 600;
+    transition-duration: 0.6s;
+}
+button:hover{
+    background-color: white;
+    border: 1px solid black;
+    font-weight: 700;
+    padding: 6px 15px;
+}
+.header ul li button:hover  a{
+    color: black;
+}
+.left_content button:hover a{
+    color: black;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 4px 10px;
+}
+.left_content h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+.left_content p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+.left_content button{
+    padding: 10px 10px;
+    transition-duration: 0.6s;
+}
+.left_content  button:hover{
+    padding: 12px 15px;
+}
+.left_content a{
+    color: white;
+    text-decoration: none;
+}
+.main{
+    padding-top: 80px;
+}
+.right_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+.upper{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+img{
+    border-radius: 10px;
+}
+.img1{
+    height: 200px;
+    width: 300px;
+    transition-duration: 1s;
+}
+.img1:hover{
+    height: 220px;
+    width: 320px;
+}
+.img2{
+    height: 250px;
+    width: 200px;
+    transition-duration: 1s;
+}
+.img2:hover{
+    height: 270px;
+    width: 220px;
+}
+.img3{
+    width: 510px;
+    height: 250px;
+    transition-duration: 1s;
+}
+.img3:hover{
+    width: 530px;
+    height: 270px;
+}
+.footer{
+    background-color: #3b855b;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    color: white;
+    height: 120px;
+    margin-top: 10px;
+    padding-left: 80px;
+    padding-bottom: 15px;
+    gap: 800px;
+}
+.footer ul{
+    display: flex;
+    gap: 30px;
+}
+.footer ul li a{
+    color: white;
+}
+.footer ul li a i{
+    font-size: 22px;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+}
+.footer ul li a i:hover{
+    color: black;
+    font-size: 26px;
+}

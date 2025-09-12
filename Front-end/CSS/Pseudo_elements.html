@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-image: linear-gradient(to right,#6dbef8,#c785f3); */
+            /* ismein le to kitne bhi color sakte hain but lene bas 2 ya max 3 hi chahiye */
+            /* agar andar kuch na likhu to top to bottom ayega gradient but agar main bracket mein to right likh du to right yo left 
+            ayega gradient */
+            /* background-image: radial-gradient(#d9ff7f,#f18ffa); */
+            /* ye thoda ellipticak shape kasa hota hai
+            ismein jaise upar to right diya tha vese hi yahan shape de sakte hain jaise circle 
+            fir usi shape ka gradient dikhega */
+            /* aise hi repeating radial gtadient aur repeating linear gradient hota hai jismein baar baar repeat hote rahega pure   webpage pe */
+            background-image: conic-gradient(red,yellow);
+            /* ismein 360 degrees mein gradient hoga degree wise  */
+        }
+        p::first-line{
+            color: blanchedalmond;
+            /* aise hi first letter bhi aa sakta hai */
+        }
+        p::after{
+            content: "Piyush";
+            color: aqua;
+        }
+        p::before{
+            content: "Piyush";
+            color: aqua;
+        }
+        p::selection{
+            background-color: aquamarine;
+            color: blue;
+            /* jab text ko select karenge tab ye hoga */
+        }
+        
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi debitis eius dolores accusamus sapiente sint aperiam hic itaque odit natus eaque, asperiores vitae cumque! Quibusdam placeat, rem, ea iusto ullam veritatis rerum error minus perspiciatis beatae libero obcaecati numquam odit accusantium expedita, sint modi? Dignissimos delectus nostrum praesentium nam. Beatae.</p>
+</body>
+</html>

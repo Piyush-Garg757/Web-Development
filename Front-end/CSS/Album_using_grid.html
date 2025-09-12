@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 100px;
+            
+        }
+        .box{
+            /* height: 100px;
+            width: 100px; */
+            border: 1px solid white;
+        }
+        .box1{
+            background-color: #ff0000;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            display: grid;
+        }
+        .box2{
+            background-color: #8da1de;
+        }
+        .box3{
+            background-color: #62ee3c;
+        }
+        .box4{
+            background-color: #7aaef8;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .box5{
+            background-color: #c563ca;
+        }
+        .box6{
+            background-color: #347a68;
+        }
+        .box7{
+            background-color: #7639e7;
+        }
+        .box8{
+            background-color: #e27474;
+        }
+        .box9{
+            background-color: #245e18;
+        }
+        .b1{
+            height: 150px;
+            width: 150px;
+            background-color: blue;
+            align-self: center;
+            justify-self: center;
+            
+        }
+        .b2{
+            height: 150px;
+            width: 150px;
+            background-color: purple;
+            align-self: center;
+            justify-self: center;
+        }
+        .b3{
+            height: 150px;
+            width: 150px;
+            background-color: yellow;
+            align-self: center;
+            justify-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="box box1">
+            <div class="box box1 b1"></div>
+            <div class="box box1 b2"></div>
+            <div class="box box1 b3"></div>
+        </div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+        <div class="box box7"></div>
+        <div class="box box8"></div>
+        <div class="box box9"></div>
+        <!-- sabse pehle hum chahte the ki red 2 columns ki jagah le isiliye red mein grid-row-start aur grid-row-end use kiya aur uski counting aise hogi jaise red ki upper boundary ko 1 fir uski lower ko 2 fir uske neeceh vale ki lower ko 3 to hum chahte the ki red neeceh vale lo cover kar le to 3 pe end hona chaiye -->
+        <!-- aise hi humne grid-column-start aur grid-column-end use kiya -->
+    </div>
+</body>
+</html>

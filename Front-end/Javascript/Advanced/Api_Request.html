@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121;color: #fff;">
+    <!-- 0 UNSENT - Client has been created. open() not called yet.
+    1 OPENED - open() has been called.
+    2 HEADERS_RECEIVED - send() has been called, and headers and status are available.
+    3 LOADING - Downloading; responseText holds partial data.
+    4 DONE - The operation is complete. -->
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xrh = new XMLHttpRequest()//ye ek meethod hi jiske through data send kar sakte hain aur receive kar sakte hain
+    xrh.open("GET", requestUrl)// open hi actually mmein request ko bhejta hai     iske 2 paramerer hote hain ek to ki get  ya post aur dusra url  aur ye apne aap call nahi hote call karna padta hai
+    console.log(xrh.readyState);// ye readystate upar body mein jo likhe hain unmein se hoti hai but ye change hoti rehti hai to humein ise track karna hoga
+    let data;
+    xrh.onreadystatechange = function () {
+        console.log(xrh.readyState);
+        if (xrh.readyState === 4) {
+            // const data = this.responseText
+            data = JSON.parse(this.responseText)
+            console.log(typeof data); // jab bhi data ata hai response se to most of the time vo string meun ata hai kabhi kabhi object bhi aa jata hai     to humein use convert karna hoga uske liyeb we use JSON.parse
+            console.log(data.followers);
+            console.log(data);
+
+
+            const body = document.querySelector("body")
+            body.innerHTML = "<button class='button'>Click on this button to see Avatar and follower count</button>"
+            body.style.display = 'flex'
+            body.style.alignItems = 'center'
+            body.style.justifyContent = 'space-around'
+            body.style.padding = "300px 0px"
+
+            /*const button = document.querySelector('.button')
+            button.style.height="100px"
+            button.addEventListener('click', function (e) {
+                console.log(data.followers);
+                body.innerHTML = `
+                <section class="section">
+                <img src="${data.avatar_url}" alt="This is avatar">
+                <p>The number of followers are ${data.followers}</p>
+                </section>  `
+            })*/
+        }
+    }// ye funcion jab bhi state change hogi tab use print kar dega
+    xrh.send()// ab humne open ko call kar diya
+
+
+    // ab ismein humara ye task tha ki ek button banana hai jispe click karein to image aa jaye aur follower count aur ye sara js ki help se karna tha 
+    // to basic basic kar denge but ek cheez ka dhyaan rakhna hai ki ye pura onreadystatechange vale function mein karna hai kyuki jab tak state 4 reach nahi hoga tab tak hum data ke elements ko access kaise kar sakte hain  to iss cheez ka dhyaan rakhna hai
+
+
+
+    // aur ye pura jo bhi ismein dekha vo  purana tareeka hai jo ki zyada use nahi hota aaj kal but knowledge honi chahiye
+</script>
+
+</html>

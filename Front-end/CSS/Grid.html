@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* grid 2d mein kaam karta hai javki flex 1d mein kaam karta tha so we need grid */
+        .cont{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr /* ya fir repeat(3,1fr)*/;
+            /* yahan minmax bhi desakte hain aise minmax(10px,1fr) minmax(10px,1fr) minmax(10px,1fr) */
+            /* ismeinn ye dena hota hai ki columns ke beech kitna space dena hai aur vo generally fr mein dete hain which is basically fraction unit*/
+            grid-template-rows: 100px 100px 100px;
+            /* ye height of each row speciify karne ke liye hai */
+            /* we have align-self and justify-self align-self kaam karta hai y-axis pe aur justify-sekf kaam karta hai x-axis pe and we can give start end center */
+            grid-template-areas: 'box1 box2 box2 box3' ; 
+            gap: 10px;
+            /* we can also use justify-items and align-items */
+        }
+        .box{
+            /* height: 100px;
+            width: 100px; */
+            margin: 2px;
+        }
+        .box1{
+            background-color: red;
+        }
+        .box2{
+            background-color: yellowgreen;
+        }
+        .box3{
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="box box1" ;style="grid-area: box1"></div>
+        <div class="box box2" ;style="grid-area: box1"></div>
+        <div class="box box3" ;style="grid-area: box1"></div>
+        <div class="box box1" ;style="grid-area: box1"></div>
+        <div class="box box2" ;style="grid-area: box1"></div>
+        <div class="box box3" ;style="grid-area: box1"></div>
+        <div class="box box1" ;style="grid-area: box1"></div>
+        <div class="box box2" ;style="grid-area: box1"></div>
+        <div class="box box3" ;style="grid-area: box1"></div>
+    </div>
+</body>
+</html>

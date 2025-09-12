@@ -1,0 +1,138 @@
+*{
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  width: 100vw;
+  background-color: #edf1fd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+nav ul li a{
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+button{
+  background-color: rgb(18,155,155);
+  padding: 4px 10px;
+  cursor: pointer;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-weight: 600;
+  width: fit-content;
+}
+button:hover{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+nav{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-weight: 500;
+}
+nav ul li:hover{
+  text-decoration: underline;
+  font-weight: 900;
+}
+.search{
+  display: flex;
+  gap: 25px;
+}
+input{
+  padding: 4px 10px;
+}
+.hero.section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 100px;
+}
+.left.content {
+  width: 55%;
+}
+.left.content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.left.content h1 span {
+  background-color: rgb(18,155,155);
+  color: white;
+  padding: 2px 5px;
+  font-weight: 900;
+  font-size: 2.5 rem;
+}
+.left.content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.left.content p span {
+  background-color: rgb(18,155,155);
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+}
+.right.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+.right.content button{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.right.content img{
+  height: 280px;
+  width: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+.right.content img:hover{
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 35%;
+}
+footer{
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  justify-content: space-around;
+}
+footer p{
+  font-weight: 600;
+}
+footer ul{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+footer ul li a i {
+  font-size: 24px;
+}
+footer ul li a i:hover{
+  color: black;
+  background-color: white;
+}

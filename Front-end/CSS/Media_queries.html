@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: red;
+            text-align: center;
+        }
+        body{
+            background-color: #123456;
+        }
+        /* media queries matlab basically different different screens pe humari website smoothly run kare uske ui/ux fat na jaye iss sabke liye coding karna */
+        @media (min-width: 900px){
+            /* ye tab ke liye code jab width 900 ye usse zyada ho */
+            body{
+                background-color: #f775d8;
+            }
+        }
+        /* yahan upar jjaise min-width diya aise hi max bhi de sakte hain aur chahho to dono ek saath bhi de sakte ho
+        @media (min-width: 900px) and (max-width:1000px) to 900-1000 ki range mein ye chalega
+        (400px <= width <=700px )
+        aise bhi likh sakte hain */
+        /* ab hum har device ke liye to apna css nahi likhemge na to hum 5 size pakad ke chaallte hain */
+        @media (max-width: 600px){
+            /* phones */
+            body{
+                background-color: #157893;
+                div::after{
+                    content: 'this is compatible for mobile phones';
+                }
+            }
+        }
+        @media (min-width: 600px){
+            /* big phones and portrait tablets */
+            body{
+                background-color: #dc1a6e;
+                div::after{
+                    content: 'this is compatible for big phones and portrait tablets';
+                }
+            }
+        }
+        @media (min-width: 768px){
+            /* tablets */
+            body{
+                background-color: #bcf1b4;
+                div::after{
+                    content: 'this is compatible for tablets';
+                }
+            }
+        }
+        @media (min-width: 992px){
+            /* laptops */
+            body{
+                background-color: #9490f5;
+                div::after{
+                    content: 'this is compatible for laptops';
+                }
+            }
+        }
+        @media (min-width: 1200px){
+            /* larger screens */
+            body{
+                background-color: #f2f79b;
+                div::after{
+                    content: 'this is compatible for larger screens';
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Good Morning Gokuldham</h1>
+    </div>
+</body>
+</html>

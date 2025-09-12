@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* sabse pehle to flex ke liye parent aur child hona chaiye tab parent mein hum flex use kar sakte hian aur ye better positioning ke liyehota hai */
+        /* ismein kuch properties container ki hoti hain jo ki hum cont mein use karenge aur kuch items ki hoti hain jo hum box 1 2 3 pe use karenge */
+        .cont{
+            display: /*inline-flex*/ flex ;
+            /* display flex likhne se ye ek line mein aa jate hain varna upar neeche aate hain */
+            border: 2px solid black;
+            /* ab jab maine border laga diya to vo puri line lega na ki utni jitni mein 3 block aa rahe hain mere isiliye hum display meinn denge inline-flex */
+            flex-direction: row;
+            /* ismein row row reverse column column revverse de sakte hain apni need ke according */
+            flex-wrap: wrap;
+            /* nowrap default hota hai reverse wrap aur wrap de sakte hain*/
+            /* iska kaam basically ye hota hai ki jaise hum apne browser window ko vhota karenge to humare 3 blocks bhi chote hote jayene jabki humne height aur width de rakhi hai but ye dene se vo utne hi rahenge upar neeche ho jaynge space adjust karne ke liye but size change nhi karenge
+            aur reverse wrap mein jo pehle hai vo baad mein aa jayeva basically reverse */
+            justify-content: space-evenly;
+            /* ismein center start end space-around space-evenly space-between ye sab de sakte hain */
+            /* centre to sab beech mein end to line ke end mein aur start to line ke shuru mein space evenly se space equally bat jayega elements ya childs ke beech space around aur space between mein aas paas vala space evenly bat jayega aur elements ke beech ka space evenly bat jayega respectively */
+            height: 100px;
+            align-items: stretch;
+            /* iss property ko acche se samajhne ke liye humne box ki height aur width ko comment kiya hai */
+            /* jaise justify-content line mein kaaam karta hai vese hi align items vertically kaam karta hai */
+            /* ismein center end aur stretch de sakte hain center aur end to obvious hai stretch se height jitna khich jayega */
+            /* yahan hum gap row-gap auru column-gap bhi de sakte hain */
+            align-content:flex-end;
+            /* ye bhi align-items jaisa hi hota hai but ye tabhi kaam karta hai jab flex-wrap wrap kar rakha ho */
+        }
+        .box{
+            /* height: 100px;
+            width: 100px; */
+        }
+        .box1{
+            background-color: red;
+            order: 2;
+            /* order dene se elements aage peeche kar sakte hain*/
+            flex-grow: 2;
+            /* ye elements ka size dene ke liye row ya column mein hi ayr ek dusre ke respect mein */
+            /* aise hi ek property hoti hai flex-shrink usmein ye hota hai ki jisko ye doge vo jab screen vhoti karenge to vo sabse pehle shrink hoga aur jitna bda numbber doge utna zyada shrink hoga */
+            /* flex-basis: 1; */
+            align-self: baseline;
+        }
+        .box2{
+            background-color: yellow;
+            order: 3;
+            flex-grow: 3;
+        }
+        .box3{
+            background-color: blue;
+            order: 1;
+            flex-grow: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+    </div>
+</body>
+</html>

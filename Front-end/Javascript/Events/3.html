@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #2f2f2f; color: #fff;">
+    <h1>Piyush's Page</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval(function () {
+    //     console.log("Piyush Garg");
+    // }, 10000)
+
+    /*const say_date = function () {
+        console.log("Piyush Garg", Date.now());
+    }
+    const interval_id = setInterval(say_date, 1000,))*/
+
+    // ye dono to normal methods the but set_interval mein ek third parameter bhi de saktee hain chaho to 
+    const say_date = function (str) {
+        console.log(str, Date.now());
+    }
+    const interval_id = setInterval(say_date, 1000, "Hi")
+    clearInterval(interval_id)
+
+    // ab acheive ye karna hai ki start pe click karein to start ho aur stop pe karein to ruk jaye
+    let start = undefined;
+    document.querySelector('#start').addEventListener('click', function (e) {
+        start = setInterval(function () {
+            console.log("Piyush Garg", Date.now());
+        }, 1000)
+    })
+    document.querySelector('#stop').addEventListener('click', function (e) {
+        clearInterval(start)
+    })
+
+</script>
+
+</html>

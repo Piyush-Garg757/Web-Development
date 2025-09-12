@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bg-black">
+        <h1 id="Firstheading" ,class="heading">Learning DOM </h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+</body>
+
+</html>
+
+<!-- document.querySelector('h1')
+<h1 id=​"Firstheading" ,class=​"heading">​Learning DOM ​</h1>​
+
+document.querySelector('#Firstheading')
+<h1 id=​"Firstheading" ,class=​"heading">​Learning DOM ​</h1>​
+
+document.querySelector('.heading')
+<h1 id=​"Firstheading" ,class=​"heading">​Learning DOM ​</h1>​
+
+document.querySelector('input[type="password"]')
+null​
+
+document.querySelector('ul').querySelector('li').style.backgroundColor='green'
+ye first li ke bgc ko green kar dega
+
+
+quesryselector to bas ek hi yani top most value select  karta tha 
+for selecting all valuues we use queryselectorAll
+
+const list = document.querySelectorAll('li')
+it will select all li and will give this as output - NodeList(3) [li, li, li]
+ye nodelist deta hai na ki array
+
+list.style.backgroundcolor='green'  this will not work
+list[0].style.backgroundcolor='green'  this will work yahah pe thoda clearly define karna padta hai kispe kya karna hai
+
+jaise h1 to humare paas 1 hi hai to usmein bhi aise larenge to [0] dena padega tabhi kaam karega
+aur nodelist mein foreach loop laga sakte haain ye hum uske prototypes mein jakew check kar sakte hain 
+maps nahi lagaa sakte
+
+HTMLCollection pe to foreach bhi nahi laga sakte isilye inko array meein convert karna ana zaaruri hai 
+
+Array.from(classlist) iss type se classlist jo ki htmlCollection ya Nodelist hogi use Array mein convert kar sakte hain fi loops laga skte hin
+ -->

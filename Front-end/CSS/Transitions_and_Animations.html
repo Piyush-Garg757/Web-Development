@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            background-color:#72eaec;
+            transition: width 1s,height 1s,background-color 1s;
+            transition-timing-function: ease-in-out;
+            /* isse zyada farak nahi padega but use kar sakte hain thoda minute timing pe farak padta hoga */
+            transition-delay: 1s;
+            /* matlab cursor ke uspe jane ke 1 sec baad transiton start hoga */
+        }
+        div:hover{
+            width: 400px;
+            height: 150px;
+            background-color: #93fd66;
+        }
+        .red{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            /* ***** left movement of the block vale animation ke liye position relative karna necessary hai */
+            animation-name: color;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            /* isse animation jo number daloge utni baar chalegi */
+            animation-direction: reverse;
+            /* isse ye hoga ki 100% vali se 0% ke taraf jayegi
+            yahi alternate-reverse karunga to pehle 100 se 0 fir 0 se 100 */
+            animation-timing-function: ease-in-out;
+            /* isse wahi thoda thoda farak padta hai
+            ease ease-in ease-out linear ye sab values de sakte hain */
+            animation-fill-mode: both;
+            /* ismein forward backward both aur none de sakte hain 
+            hota kya hai ki forward diya hai to animation khatam hone ke baad 100% vali state pe retain rahega vapas 0 pe nahi ayega aise hi backward doge to 0% vali se start hoga both doge to dono karega aur ye animation direction pe bhi depend karta hai */
+        }
+        @keyframes color{
+            0% {
+                background-color: red;
+                height: 100px; 
+                width: 100px;
+                top: 0px;
+                left: 0px;
+            }
+            25% {
+                background-color: green; 
+                height: 200px; 
+                width: 200px;
+                top: 0px;
+                left: 200px;
+            }
+            50% {
+                background-color: red;
+                height: 100px; 
+                width: 100px;
+                top: 200px;
+                left: 200px;
+            }
+            75% {
+                background-color: green; 
+                height: 200px; 
+                width: 200px;
+                top: 200px;
+                left: 0px;
+            }
+            100% {
+                background-color: red;
+                height: 100px; 
+                width: 100px;
+                top: 0px;
+                left: 0px;
+            }
+            /* yahan percentages dene ki jagah from to bhi de sakte hain */
+        } 
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt voluptatibus accusamus harum ea est dicta, voluptates veniam soluta quia quaerat aut nemo error suscipit. Iure laboriosam velit tempora eum temporibus?</p>
+    </div>
+    <div class="red">
+        <h1>hello dosto</h1>
+    </div>
+</body>
+</html>
