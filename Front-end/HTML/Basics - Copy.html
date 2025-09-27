@@ -26,14 +26,11 @@
     <!-- attributes add karne ke liye bas uska naam likho aur double inverted commmas mein content likho -->
     <!-- single inverted bhi use kar sakte hain but preffered double hain -->
     <!-- example of absolute link -->
-    <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/tdo_cqP_JnE?si=CY3BbNctWEuivqKn"
-        title="YouTube video player" 
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen>
-</iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tdo_cqP_JnE?si=CY3BbNctWEuivqKn"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe><br>
 
     <!-- iframe type karkr enter karte hi sab aa jayega bas video ka link copy kar do -->
     <video src="video.mp4" controls autoplay loop></video>
@@ -44,7 +41,7 @@
     <!-- absolute mein aap globally kahi se bhi ja sakte ho but relative mein aap apne server mein ho tabhi jasakte ho -->
     <!-- img tag used to add image -->
     <!-- apne system se image ka address utha rahe ho to src mein add karne se pehle '/' ayega -->
-    <a href="pdf/one.pdf"download>download thee pdf</a>
+    <a href="pdf/one.pdf" download>download the pdf</a>
     <!-- link ke baad download likhne se ye hua ki humne permit kar diya download ke liye ab file exist krti hogi to download hone lagegi -->
     <img src="Images/Screenshot 2024-12-26 125016.png" alt="Loading please wait" width="121px" title="ABC"><br>
     <!-- if the page is inside a directory we need to make sure that we link to the correct page matlab jo image hum add kar rahe hain apne page pe agar vo kisi folder mein hai to uska address thoda optimise ho jayega jaise upar humari image Images naam ke folder mein thi to humne image ke address se pehle Image/ add kiya-->
@@ -68,44 +65,44 @@
     <br>
     <!-- kuch special symbols ke code hum noline sraech kar sakte hain kyuki vo keyboard pe inbuilt to hote nahi hai so unko special tareeke se karna hota hai jaise ki arrow -> aise banane ki bajay proper arrow ka code hota hai use likhenge to webpage pe arrow show hoga-->
     <p>&rarr;</p>
-    <!-- ab form banate hain -->
+    <p>&rangle;</p>
     <form action="form.php" method="post">
-        <!-- form ke 2 methods hote hain get aur post get mein sara data form ke yrl mein aa jata hai post mein aisa nahi hota -->
+        <!-- form ke 2 methods hote hain get aur post get mein sara data form ke url mein aa jata hai post mein aisa nahi hota -->
         <!-- fieldset mein daalne se pura form ek box ke andar aa jata hai -->
         <fieldset>
             <legend>Details !!</legend>
             <h1>Fill this form</h1>
-        <input type="text" placeholder="Enter your name"><br>
-        <p>Enter your section:-</p>
-        <label for="sectiona">
-            <input type="radio" value="Section A" name="Section" id="sectiona">Section A
-        </label>
-        <label for="sectionb">
-            <input type="radio" value="Section B" name="Section" id="sectionb">Section B
-        </label>
-        <label for="sectionc">
-            <input type="radio" value="Section C" name="Section" id="sectionc">Section C
-        </label><br>
-        <!-- label se ek unique id ban jati hai -->
-        <!-- jin radios ke name same hain unmein se ek hi select kar sakte hain to tabhi vo checkbox type ka banta hai -->
-        <!-- input type = date aur password aur email bhi hota hai -->
-        <label for="canteencardid">
-            <input type="checkbox" name="Canteen card" id="canteencardid" class="red">Want canteen card
-        </label><br>
-        <!-- input  mein value doge to by default vo likha ayega agar chhte ho ki jo value tumne di hai user use  badal na paye to readonly kar do aur disabled bhi kar sakte hain -->
-        <input type="text" value="John" readonly disabled>
-        <input type="number" min="0" max="100">
-        <!-- aise hi ek ata hai autofocus input mein hi jispe bhi autofocus llikha hoga to web page jabb load hoga tab uss vale input pe focus hoga by default -->
-        <!-- upar label for mein jo likha hai vahi neeche id mein likha hai isiliye jab hum api site pe jayenge tab text(Want canteen card) pe click karne se bhi humara checkbox select ho jayega warna nahi hota-->
-        <!-- class rakhne se css mein formatting karte time sahuliyat hoti hai like vahan aise likh sakte hain ki jis jiski class red hai usmein ye formatting kar do to fayda hota hai -->
-        <!-- label vagera aur namevagera proper checkbox mein bhi ho sakta hai -->
-        <textarea name="explain" id="explain" placeholder="Explain why you want to join" cols="30"
-            rows="10"></textarea><br>
-        <select name="car" id="car">Select your car
-            <option value="omni">omni</option>
-            <option value="alto">alto</option>
-        </select>
-        <input type="submit" value="Submit">
+            <input type="text" placeholder="Enter your name"><br>
+            <p>Enter your section:-</p>
+            <label for="sectiona">
+                <input type="radio" value="Section A" name="Section" id="sectiona">Section A
+            </label>
+            <label for="sectionb">
+                <input type="radio" value="Section B" name="Section" id="sectionb">Section B
+            </label>
+            <label for="sectionc">
+                <input type="radio" value="Section C" name="Section" id="sectionc">Section C
+            </label><br>
+            <!-- label se ek unique id ban jati hai -->
+            <!-- jin radios ke name same hain unmein se ek hi select kar sakte hain to tabhi vo checkbox type ka banta hai -->
+            <!-- input type = date aur password aur email bhi hota hai -->
+            <label for="canteencardid">
+                <input type="checkbox" name="Canteen card" id="canteencardid" class="red">Want canteen card
+            </label><br>
+            <!-- input  mein value doge to by default vo likha ayega agar chhte ho ki jo value tumne di hai user use  badal na paye to readonly kar do aur disabled bhi kar sakte hain -->
+            <input type="text" value="John" readonly disabled>
+            <input type="number" min="0" max="100">
+            <!-- aise hi ek ata hai autofocus input mein hi jispe bhi autofocus llikha hoga to web page jabb load hoga tab uss vale input pe focus hoga by default -->
+            <!-- upar label for mein jo likha hai vahi neeche id mein likha hai isiliye jab hum api site pe jayenge tab text(Want canteen card) pe click karne se bhi humara checkbox select ho jayega warna nahi hota-->
+            <!-- class rakhne se css mein formatting karte time sahuliyat hoti hai like vahan aise likh sakte hain ki jis jiski class red hai usmein ye formatting kar do to fayda hota hai -->
+            <!-- label vagera aur namevagera proper checkbox mein bhi ho sakta hai -->
+            <textarea name="explain" id="explain" placeholder="Explain why you want to join" cols="30"
+                rows="10"></textarea><br>
+            <select name="car" id="car">Select your car
+                <option value="omni">omni</option>
+                <option value="alto">alto</option>
+            </select>
+            <input type="submit" value="Submit">
         </fieldset>
     </form>
 </body>
