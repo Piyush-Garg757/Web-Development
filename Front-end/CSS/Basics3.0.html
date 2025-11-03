@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        p{
+        p {
             font-size: 20px;
             font-variant: small-caps;
             font-weight: 200;
             display: inline;
             /* p ek block element hota hai but humne display use karke use inline bana diya */
         }
-        body{
+
+        body {
             background-color: #808080;
         }
-        span{
+
+        span {
             display: inline-block;
             width: 1080px;
             height: 100px;
@@ -25,7 +28,8 @@
             overflow: hidden;
             /* isse ye hota hai ki agar humara content humare box se bahar ja raha hai to jo bahar ja raha hai vo diikhega hi nahi */
         }
-        .one{
+
+        .one {
             height: 50px;
             width: 50px;
             background-color: red;
@@ -34,20 +38,43 @@
             z-index: -1;
             /* z index priority deta hai jaise use comment karein to ye box content ke upar aa raha tha to humne z index -1 kiya  jisse ki vo background mein chala gaya aur humara content priority ban gaya */
         }
-        .two{
+
+        .two {
             height: 50px;
             width: 50px;
             background-color: yellow;
+            box-shadow: 10px 10px;
         }
     </style>
 </head>
+
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil labore architecto cumque saepe omnis nemo, quae dolorem? At ad sapiente a voluptatum reprehenderit similique, maxime perspiciatis ullam officiis id omnis!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ab incidunt quasi, repudiandae exercitationem iure consequatur vel debitis quis voluptatibus velit, labore perspiciatis nesciunt saepe nam voluptatem omnis! Ducimus, vel! Quidem eum officiis, officia rem odit libero obcaecati quod fuga?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil labore architecto cumque saepe omnis nemo, quae
+        dolorem? At ad sapiente a voluptatum reprehenderit similique, maxime perspiciatis ullam officiis id omnis!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ab incidunt quasi, repudiandae exercitationem
+        iure consequatur vel debitis quis voluptatibus velit, labore perspiciatis nesciunt saepe nam voluptatem omnis!
+        Ducimus, vel! Quidem eum officiis, officia rem odit libero obcaecati quod fuga?</p>
     <hr>
-    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi a debitis, aliquam explicabo blanditiis eius. Voluptas corrupti inventore assumenda cumque officiis perspiciatis iure aperiam atque? Soluta assumenda, dolores quis molestiae fugiat dolorum dolore! Dicta culpa modi repellat tenetur illum, excepturi blanditiis aperiam iure est dolores sequi inventore expedita sunt deleniti maxime error cupiditate possimus laborum doloremque facilis illo rerum ex reprehenderit. Provident fugiat cum rerum non, dicta libero dolor perferendis doloremque reiciendis numquam recusandae, adipisci, similique nesciunt tenetur corporis quo repudiandae suscipit earum fugit ullam ipsum! Soluta debitis necessitatibus, illum fuga explicabo possimus quibusdam quasi quam consequuntur deleniti? Animi facere optio amet at qui accusamus vitae impedit facilis excepturi ratione, aliquam molestias exercitationem porro pariatur corrupti perspiciatis aliquid unde eius quasi necessitatibus consequuntur modi sapiente quod perferendis? Obcaecati rem dicta alias neque consequuntuenderit porro, necessitatibus ducimus ad, nisi ab aliquid expedita. Minus vero nesciunt sunt earum nemo. Eum enim maxime possimus quae ut cum facilis veniam voluptatum quaerat delectus dolores voluptate, provident, reprehenderit veritatis accusantium necessitatibus. Voluptatibus, dolores optio molestias atque quidem ipsa non eos! Aliquam adipisci consequatur repellat illo odio exercitationem excepturi. Dicta aliquid, ducimus magnam odit a ex tenetur laborum nam error unde recusandae mollitia eveniet debitis. Perferendis consequatur quis eveniet amet dolorem! Commodi, deserunt impedit earum error molestias ab excepturi cumque, veritatis culpa a quis quia doloribus recusandae nisi unde possimus!!</span>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi a debitis, aliquam explicabo blanditiis eius.
+        Voluptas corrupti inventore assumenda cumque officiis perspiciatis iure aperiam atque? Soluta assumenda, dolores
+        quis molestiae fugiat dolorum dolore! Dicta culpa modi repellat tenetur illum, excepturi blanditiis aperiam iure
+        est dolores sequi inventore expedita sunt deleniti maxime error cupiditate possimus laborum doloremque facilis
+        illo rerum ex reprehenderit. Provident fugiat cum rerum non, dicta libero dolor perferendis doloremque
+        reiciendis numquam recusandae, adipisci, similique nesciunt tenetur corporis quo repudiandae suscipit earum
+        fugit ullam ipsum! Soluta debitis necessitatibus, illum fuga explicabo possimus quibusdam quasi quam
+        consequuntur deleniti? Animi facere optio amet at qui accusamus vitae impedit facilis excepturi ratione, aliquam
+        molestias exercitationem porro pariatur corrupti perspiciatis aliquid unde eius quasi necessitatibus
+        consequuntur modi sapiente quod perferendis? Obcaecati rem dicta alias neque consequuntuenderit porro,
+        necessitatibus ducimus ad, nisi ab aliquid expedita. Minus vero nesciunt sunt earum nemo. Eum enim maxime
+        possimus quae ut cum facilis veniam voluptatum quaerat delectus dolores voluptate, provident, reprehenderit
+        veritatis accusantium necessitatibus. Voluptatibus, dolores optio molestias atque quidem ipsa non eos! Aliquam
+        adipisci consequatur repellat illo odio exercitationem excepturi. Dicta aliquid, ducimus magnam odit a ex
+        tenetur laborum nam error unde recusandae mollitia eveniet debitis. Perferendis consequatur quis eveniet amet
+        dolorem! Commodi, deserunt impedit earum error molestias ab excepturi cumque, veritatis culpa a quis quia
+        doloribus recusandae nisi unde possimus!!</span>
     <div class="one"></div>
     <div class="two"></div>
     <!-- shift alt aur down vali key press karoge to puri line neeche copy kar sakte hain jitni baar press karoge utni baar paste ho jayega -->
 </body>
+
 </html>
