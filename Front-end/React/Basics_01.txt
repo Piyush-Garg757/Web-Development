@@ -1,0 +1,23 @@
+npm create vite@latest se shuru hoga project aur uske baad jaise jaise jo jo select karne bole karte jao 
+
+
+apna most of the kaam src ke andar hi hoga
+
+to jo kaamke folders nahi hai unhein uda do src mein se jaise assets app.css index.css
+
+ab do bach gaye main.jsx aur app.jsx 
+to inn dono mein jake o jo files delete ki hain 
+unmein se kuch import ho raha ho use uda do
+
+import { useState } from 'react' ye bhi udega app.jx mein se 
+
+basiclly function app se upar upar jo bhi aa raha hai sab uda do
+function app mein bhi bas return statement chodo aur baaaki sab uda do aur return ke andar vala bhi uda do aur jo print karana hai v likh sakte ho jaise <h1> Piyush Garg</h1>
+
+run karne ke liye package.json se dekho   baaki vese npm run dev se hota hai  aur ye ensure karna sahi folder mein ho
+
+node modules folder na ho to vo npm install karte hi aa jata hai
+
+gitignore mein hoti hain files jo github pe push karni hain aur kya nahi karni   aur usmein jake dekhoge to usmein node modules ka naam hota hai kyuki vo npm install se aa jati hai
+
+packagelock.json mein dependencies lock ho jati hain ki vo bas isi version pe chalengi aur kispe nahi
