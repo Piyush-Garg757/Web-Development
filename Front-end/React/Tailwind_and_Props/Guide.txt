@@ -58,3 +58,111 @@ ismein syntax hota hai ye ki className use karna hota hai aur uske aage jitni bh
 aur hum tailwind ki site se kuch accha lage ska code utha bhi sakte hain aur apne code mein use kar sakte hain but ek dikkat hoti 
 jsx har tag ko closing tag assume karta hai to maan lo koi img tag vagera jaisa hai to  use jaanke closng bana do jaise <img             />
 
+ab na hum iss tarah ke components uthake daal sakte hain
+
+<div className="relative h-[400px] w-[300px] rounded-md">
+  <img
+    src="https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHZzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+    alt="AirMax Pro"
+    className="z-0 h-full w-full rounded-md object-cover"
+  />
+
+  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+
+  <div className="absolute bottom-4 left-4 text-left">
+    <h1 className="text-lg font-semibold text-white">Delba</h1>
+
+    <p className="mt-2 text-sm text-gray-300">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+      debitis?
+    </p>
+
+    <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
+      View Profile →
+    </button>
+  </div>
+</div>
+
+
+ab react kya kehta hai 
+ki baar baar card use ho sakta hai to kyu na card ko ek component bana dein jise bar baar use kar sakte hain
+to hum components naam ka folder bana lete hain src ke andar aur uske andar Card.jsx 
+
+to humne ek extension download kar rakhi hain react snippets naam se jo card.jsx mein rfc likhte hi apne aap react function component de deti hai joki aisa hota hai
+
+import React from 'react'
+
+function Card() {
+    return (
+        
+    )
+}
+
+export default Card
+
+ab yahan pe return mein apna code chep do card vala 
+
+ab hum apne iss Card component ko import kar sakte hain app.jsx mein  kuch aise import Card from "./components/Card";
+aur fir return mein card return kar do <Card />
+
+
+
+ab maan lo humein kuch properties define karni hain jaise alag alag card ke liye karna ho 
+to function Card(props){
+
+}
+aise usmein props keyword use kar sakte hain  iske baaad jahan hum retrun kar rahehain app.jsx mein Card ko   vahan uske aage properties de sakte hain kuch aise
+
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Card from "./components/Card";
+
+function App() {
+  const [count, setCount] = useState(0);
+  let obj = {
+    name: "Piyush Garg",
+    age: 19,
+  };
+  return (
+    <>
+      <h1 className="bg-green-400 text-black p-3 rounded-xl">Tailwind css</h1>
+      <Card channel="Piyush" someobj={obj} />
+    </>
+  );
+}
+
+export default App;
+
+
+
+but iske baad humne ye dekha ki jo properties hum bhejrahe hain unse webpage pe oi farak nahi aa raha card mein bas console kholke dekhenge to farak dikhega  
+to vo acheive karne ke liye hum ek diff syntax use karenge
+
+function Card({channel}) {    pehle jaise props likhne ki jagah hum aise likhenge 
+fir aage code mein jahan delba likha hua tha use {channel} se replace kar denge  ab dekenge to humein web page pe Piyush dikhega card mein
+
+Ab hum aise karenge 
+<Card channel="Piyush" someobj={obj} />
+<Card channel="ABC"/>
+to do cards aa jayenge upar neeche aur unpe channel ke andar jo value hai vo naam print honge  
+
+
+ab aise hi hum koi bhi variable banake koi bhi apni pasand ki value pass kar sakte hain 
+kuch aise 
+<Card channel="Piyush" someobj={obj} btn="Hello" />
+<Card channel="ABC" btn="Hello dosto"/>
+
+
+aur 
+
+
+function Card({channel,btn}) {
+<button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
+{btn}
+</button>
+
+aur ismein maan lo kisi mein ye parameter pass hi nahi kiya to default value ani chahiye 
+to uske liye
+function Card({channel,btn = "Visit me"}) {  agar ksii ne value nahi di to default vali lag jayegi varna vo vali
