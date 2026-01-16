@@ -1,0 +1,27 @@
+createRoot(document.getElementById('root')).render(
+  
+    <App />
+)
+
+ismein createroot method pura dom like structure create karta hai jise virtual dom kehte hain
+aur fir ye main dom(browser vale dom) aur apne dom(react vale dom) ko compare karta hai aur fir unhi cheezon ko update karta hai jo ki update hui hain    isi process ko recoincilation kehte hain
+lekin browser pura dom firse create karta hai vo iski tarah nahi karta 
+isi ko page reloading kehte hain
+
+
+agar maan lo humein koi update karna hai ui mei to zaruri nhi ki hum aate hi kar dein
+aisa bhi ho sakta hai ki jaise hi hum update karne vale ho tabhi usi pe koi naya ipdate aa jaye to beech vala update top waste raha na seedhe naya vala update kar dena chahiye tha 
+
+React Fiber
+Fiber is a reimplementation of React’s reconciliation algorithm.
+Technically:
+Each Fiber is a unit of work
+React breaks rendering into small chunks
+These chunks can be:
+paused
+resumed
+aborted
+prioritized
+Think of it like:
+Old React  : do everything in one go 😵
+React Fiber: do work piece-by-piece 🧠
