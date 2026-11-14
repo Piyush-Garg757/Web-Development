@@ -1,0 +1,13 @@
+ismien hum ek currency convetor banayenge jo kisi bhi ek currency ko dusri me convert kar sake 
+iske liye humein obviosly api vagera call karni padengi 
+
+so sbse pehle to vahi humne react ka project bana liya and step by step usmein tailwind css bhi integrate kar liya
+
+ab hum isme custom hooks banayege 
+src me jake folder banaya hooks naam se and isme useCurrencyinfo.js naam se ek hook bnayenge
+
+ab ye hook banane ke baad hum compenent design karenge 
+basically from and to vala card almost same hai bas usme kuch hi cheezon ka difference hai so hum uss card ko as a component use kar sakte hain
+to humne Inputbox karke ek component banaya 
+
+to ab apna custom hook bhi bana liya and component bhi bana liya ab bas app.jsx me jake final karna hai
