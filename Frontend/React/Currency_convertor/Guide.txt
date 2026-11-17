@@ -11,3 +11,8 @@ basically from and to vala card almost same hai bas usme kuch hi cheezon ka diff
 to humne Inputbox karke ek component banaya 
 
 to ab apna custom hook bhi bana liya and component bhi bana liya ab bas app.jsx me jake final karna hai
+
+
+
+
+main.jsx me index.css ko import karna dhyaan rakhna hai as uske bina sahi se nahi chalega   
