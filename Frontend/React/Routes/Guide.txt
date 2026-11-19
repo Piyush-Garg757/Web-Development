@@ -1,0 +1,18 @@
+Sabse pehle humara basic project bana liya tailwind css laga diya and sab kar diya 
+
+
+ab aage hum seekhte hain react router lana 
+to uske liye documentation pe jate hain
+
+to ab hum routes seekh rahe hai to unhein install karne ki command
+npm install react-router-dom
+
+
+uske baad jake humne header.jsx naam ka component banaya and vo jaha se copy kiya tha vo paste kar diya component ka basic code
+and aise hi footer.jsx pe kaam karenge
+
+
+humne app.jsx me jake return me apne header footer and home components return kiye but page pe kuch nahi aya
+aisa isiliye kyuki hum React Router dom use kar rsshe hain  and yaad rahe jab jab router use karte hain tab humein app.jsx se kuch kaam nahi hota use hum delete bhi kar sakte hian     tab humein jo kaam hota hai vo dekho main.jsx me jake kiya hai and explain kiya hai
+
+
